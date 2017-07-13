@@ -16,15 +16,13 @@ public class TeamUI {
     private TeamUI team;
 
     private String readString(String question){
-        Scanner scanner = new Scanner(System.in);
-        String readString = scanner.toString();
-        System.out.println("Co chcesz zrobić? " + scanner);
+        System.out.println(question);
+        String readString = scanner.nextLine();
         return readString;
     }
     private int readInt (String question){
-        Scanner scanner1 = new Scanner(System.in);
-        int readInt = Integer.parseInt(scanner1.toString());
-        System.out.println("Co chcesz zrobić? " + scanner1);
+        System.out.println(question);
+        int readInt = scanner.nextInt();
         return readInt;
     }
 }
