@@ -18,4 +18,18 @@ public class FootballPlayerUI {
     public FootballPlayer getPlayer() {
         return player;
     }
+
+    private String readString(String question) {
+        System.out.println(question);
+        String answer = scanner.nextLine();
+
+        return answer;
+    }
+
+    private Integer readInt(String question) {
+        System.out.println(question);
+        Integer answer = scanner.nextInt();
+
+        return answer;
+    }
 }
