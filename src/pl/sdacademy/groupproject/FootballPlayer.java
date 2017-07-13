@@ -54,4 +54,14 @@ public class FootballPlayer extends Person {
     public void setSurname( String surname ) {
         this.surname = surname;
     }
+
+    @Override
+    public String toString() {
+        return "FootballPlayer{" +
+                "shooting=" + shooting +
+                ", speed=" + speed +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
 }

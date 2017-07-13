@@ -1,10 +1,9 @@
 package pl.sdacademy.groupproject;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.Scanner;
 
-/**
- * Created by RENT on 2017-07-13.
- */
 public class FootballPlayerUI {
 
     private Scanner scanner;
@@ -33,14 +32,11 @@ public class FootballPlayerUI {
         return answer;
     }
 
-    public String editPlayerName(String name){
+    public void editPlayerName(){
+        System.out.println("Proszę podaj imię piłkarza");
+        String name = scanner.nextLine();
         player.setName(name);
-        return name;
-    }
 
-    public String editPlayerSurname (String surname){
-        player.setSurname(surname);
-        return surname;
     }
 
     public String printPlayerInfo (){
@@ -56,5 +52,33 @@ public class FootballPlayerUI {
         return shooting;
     }
 
+    public void run(){
+        Scanner read = new Scanner(System.in);
 
+        while(true) {
+            System.out.println("Wybierz co chcesz zrobić: wypisz dane pilkarza (wypisz), " +
+                    "edycja imienia (imie), edycja nazwiska (nazwisko), edycja strzelania (strzal), edycja szybkosci (szybkosc), " +
+                    "koniec (koniec)");
+            switch(read.nextLine().toLowerCase()){
+                case "wypisz":
+                    break;
+                case "imie":
+                    editPlayerName();
+                    break;
+                case "nazwisko":
+                    break;
+                case "strzal":
+                    break;
+                case "szybkosc":
+                    break;
+                case "koniec":
+                    System.out.println("Zakończono edycję");
+                    return;
+                default:
+                    System.out.println("Błedny wybór. Spróbuj ponownie");
+                    System.out.println("");
+            }
+        }
+
+    }
 }

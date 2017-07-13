@@ -8,7 +8,8 @@ public abstract class AbstractEntity {
         this.id = id;
     }
 
-    public AbstractEntity(){}
+    public AbstractEntity() {
+    }
 
     public Integer getId() {
         return id;
