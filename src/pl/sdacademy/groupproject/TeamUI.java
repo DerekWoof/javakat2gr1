@@ -1,6 +1,8 @@
 package pl.sdacademy.groupproject;
 
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class TeamUI {
@@ -38,6 +40,7 @@ public class TeamUI {
                     this.setTeamName();
                     break;
                 case "datazalozenia":
+                    setTeamDateOfFoundation();
                     break;
                 case "dodaj":
                     break;
@@ -60,5 +63,21 @@ public class TeamUI {
     }
     private String printTeamInfo(){
        return team.toString();
+    }
+
+    private void setTeamDateOfFoundation() {
+        LocalDate localDate = this.team.getLocalDate();
+        boolean check = false;
+        do {
+            String date = readString("Podaj nową datę założenia w formacie dd.mm.yyyy");
+            DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyy");
+            try {
+                localDate = LocalDate.parse(date, format);
+            } catch (Exception e) {
+                System.out.println("Podaj prawidłowy format daty!");
+                check = true;
+            }
+        } while(check);
+        this.team.setLocalDate(localDate);
     }
 }
