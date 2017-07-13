@@ -48,13 +48,15 @@ public class FootballPlayerUI {
        return player.toString();
     }
 
-    public Integer editPlayerSpeed(int speed){
-        player.setSpeed(speed);
-        return speed;
+    public void editPlayerSpeed(){
+        System.out.println("Proszę podaj szybkosc piłkarza");
+        String speed = scanner.nextLine();
+        player.setName(speed);
     }
-    public Integer editPlayerShooting(int shooting){
-        player.setShooting(shooting);
-        return shooting;
+    public void editPlayerShooting(){
+        System.out.println("Proszę podaj strzał piłkarza");
+        String shooting = scanner.nextLine();
+        player.setName(shooting);
     }
 
     public void run(){
@@ -64,16 +66,16 @@ public class FootballPlayerUI {
                     "edycja imienia (imie), edycja nazwiska (nazwisko), edycja strzelania (strzal), edycja szybkosci (szybkosc), " +
                     "koniec (koniec)").toLowerCase()){
                 case "wypisz":
-                    break;
+                    printPlayerInfo();
                 case "imie":
                     editPlayerName();
                     break;
                 case "nazwisko":
                     editPlayerSurname();
                 case "strzal":
-                    break;
+                    editPlayerShooting();
                 case "szybkosc":
-                    break;
+                    editPlayerSpeed();
                 case "koniec":
                     System.out.println("Zakończono edycję");
                     return;
