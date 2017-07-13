@@ -33,12 +33,11 @@ public class FootballPlayerUI {
     }
 
     public void run(){
-        Scanner read = new Scanner(System.in);
 
         while(true) {
             switch(this.readString("Wybierz co chcesz zrobić: wypisz dane pilkarza (wypisz), " +
                     "edycja imienia (imie), edycja nazwiska (nazwisko), edycja strzelania (strzal), edycja szybkosci (szybkosc), " +
-                    "koniec (koniec)")){
+                    "koniec (koniec)").toLowerCase()){
                 case "wypisz":
                     break;
                 case "imie":
