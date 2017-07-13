@@ -31,7 +31,7 @@ public class TeamUI {
         while(true) {
             switch(this.readString("Co chcesz zrobić:\n Wypisz dane drużyny (wypisz),\n Edycja nazwy (nazwa),\n Edycja daty zalozenia (datazalozenia),\n Koniec (koniec)").toLowerCase()){
                 case "wypisz":
-                    break;
+                    printTeamInfo();
                 case "nazwa":
                     break;
                 case "datazalozenia":
@@ -49,5 +49,8 @@ public class TeamUI {
     private void setTeamName(){
         String name = readString("Podaj nazwę druzyny");
         team.setName(name);
+    }
+    private String printTeamInfo(){
+       return team.toString();
     }
 }

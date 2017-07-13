@@ -43,4 +43,13 @@ public class Team extends AbstractEntity{
     public void setPlayers(List<FootballPlayer> players) {
         this.players = players;
     }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "players=" + players +
+                ", name='" + name + '\'' +
+                ", localDate=" + localDate +
+                '}';
+    }
 }
