@@ -19,6 +19,20 @@ public class FootballPlayerUI {
         return player;
     }
 
+    private String readString(String question) {
+        System.out.println(question);
+        String answer = scanner.nextLine();
+
+        return answer;
+    }
+
+    private Integer readInt(String question) {
+        System.out.println(question);
+        Integer answer = scanner.nextInt();
+
+        return answer;
+    }
+
     public String editPlayerName(String name){
         player.setName(name);
         return name;
