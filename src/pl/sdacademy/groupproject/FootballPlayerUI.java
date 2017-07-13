@@ -37,6 +37,13 @@ public class FootballPlayerUI {
 
     }
 
+    public void editPlayerSurname(){
+        System.out.println("Proszę podaj nazwisko piłkarza");
+        String surname = scanner.nextLine();
+        player.setName(surname);
+
+    }
+
     public String printPlayerInfo (){
        return player.toString();
     }
@@ -62,7 +69,7 @@ public class FootballPlayerUI {
                     editPlayerName();
                     break;
                 case "nazwisko":
-                    break;
+                    editPlayerSurname();
                 case "strzal":
                     break;
                 case "szybkosc":
