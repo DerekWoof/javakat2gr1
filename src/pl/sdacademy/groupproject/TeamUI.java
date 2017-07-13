@@ -33,7 +33,7 @@ public class TeamUI {
                     ", \n Dodaj piłkarza do druzyny (dodaj), \n Usuń piłkarza z drużyny (usuń), \n Edytuj piłkarza (edytuj), " +
                     "\n Koniec (koniec)").toLowerCase()){
                 case "wypisz":
-                    break;
+                    printTeamInfo();
                 case "nazwa":
                     this.setTeamName();
                     break;
@@ -57,5 +57,8 @@ public class TeamUI {
 
     private void setTeamName(){
         team.setName(readString("Podaj nazwę druzyny"));
+    }
+    private String printTeamInfo(){
+       return team.toString();
     }
 }
