@@ -12,8 +12,6 @@ public class TeamUI {
         this.scanner = scanner;
         this.team = team;
     }
-
     private Scanner scanner;
     private TeamUI team;
-
 }
