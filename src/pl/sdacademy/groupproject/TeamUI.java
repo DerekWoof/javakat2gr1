@@ -29,13 +29,21 @@ public class TeamUI {
     public void run(){
 
         while(true) {
-            switch(this.readString("Co chcesz zrobić:\n Wypisz dane drużyny (wypisz),\n Edycja nazwy (nazwa),\n Edycja daty zalozenia (datazalozenia),\n Koniec (koniec)").toLowerCase()){
+            switch(this.readString("Co chcesz zrobić:\n Wypisz dane drużyny (wypisz),\n Edycja nazwy (nazwa),\n Edycja daty zalozenia (datazalozenia)" +
+                    ", \n Dodaj piłkarza do druzyny (dodaj), \n Usuń piłkarza z drużyny (usuń), \n Edytuj piłkarza (edytuj), " +
+                    "\n Koniec (koniec)").toLowerCase()){
                 case "wypisz":
                     break;
                 case "nazwa":
                     this.setTeamName();
                     break;
                 case "datazalozenia":
+                    break;
+                case "dodaj":
+                    break;
+                case "usuń":
+                    break;
+                case "edytuj":
                     break;
                 case "koniec":
                     System.out.println("Zakończono edycję");
