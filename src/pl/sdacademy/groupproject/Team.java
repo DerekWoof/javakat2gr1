@@ -1,8 +1,11 @@
 package pl.sdacademy.groupproject;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Team extends AbstractEntity{
+    private List<FootballPlayer> players;
+
     private String name;
     private LocalDate localDate;
 
@@ -31,5 +34,13 @@ public class Team extends AbstractEntity{
 
     public void setLocalDate(LocalDate localDate) {
         this.localDate = localDate;
+    }
+
+    public List<FootballPlayer> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<FootballPlayer> players) {
+        this.players = players;
     }
 }
