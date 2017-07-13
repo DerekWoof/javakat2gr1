@@ -1,7 +1,5 @@
 package pl.sdacademy.groupproject;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.Scanner;
 
 public class FootballPlayerUI {
@@ -32,6 +30,26 @@ public class FootballPlayerUI {
         return answer;
     }
 
+    public void editPlayerName(){
+        System.out.println("Proszę podaj imię piłkarza");
+        String name = scanner.nextLine();
+        player.setName(name);
+
+    }
+
+    public String printPlayerInfo (){
+       return player.toString();
+    }
+
+    public Integer editPlayerSpeed(int speed){
+        player.setSpeed(speed);
+        return speed;
+    }
+    public Integer editPlayerShooting(int shooting){
+        player.setShooting(shooting);
+        return shooting;
+    }
+
     public void run(){
 
         while(true) {
@@ -41,6 +59,7 @@ public class FootballPlayerUI {
                 case "wypisz":
                     break;
                 case "imie":
+                    editPlayerName();
                     break;
                 case "nazwisko":
                     break;
