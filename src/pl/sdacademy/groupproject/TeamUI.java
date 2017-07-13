@@ -33,6 +33,7 @@ public class TeamUI {
                 case "wypisz":
                     printTeamInfo();
                 case "nazwa":
+                    this.setTeamName();
                     break;
                 case "datazalozenia":
                     break;
@@ -47,8 +48,7 @@ public class TeamUI {
     }
 
     private void setTeamName(){
-        String name = readString("Podaj nazwę druzyny");
-        team.setName(name);
+        team.setName(readString("Podaj nazwę druzyny"));
     }
     private String printTeamInfo(){
        return team.toString();
