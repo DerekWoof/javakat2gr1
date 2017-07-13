@@ -4,16 +4,16 @@ package pl.sdacademy.groupproject;
 import java.util.Scanner;
 
 public class TeamUI {
-    public TeamUI getTeam() {
-        return team;
+
+    public TeamUI() {
     }
 
-    public TeamUI( Scanner scanner, TeamUI team ) {
+    public TeamUI(Scanner scanner, Team team ) {
         this.scanner = scanner;
         this.team = team;
     }
     private Scanner scanner;
-    private TeamUI team;
+    private Team team;
 
     private String readString(String question){
         System.out.println(question);
@@ -44,6 +44,10 @@ public class TeamUI {
                     System.out.println("");
             }
         }
+    }
 
+    private void setTeamName(){
+        String name = readString("Podaj nazwę druzyny");
+        team.setName(name);
     }
 }
